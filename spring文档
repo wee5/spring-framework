@@ -1,0 +1,29 @@
+IoC容器
+org.springframework.context.ApplicationContext接口代表Spring IoC容器，并负责实例化，配置和组装Bean，是一个维护bean定义以及相互依赖的注册表的高级工厂的接口
+ApplicationContextSpring提供了该接口的几种实现。在独立应用程序中，通常创建ClassPathXmlApplicationContext 或的实例 FileSystemXmlApplicationContext
+
+配置元素据
+基于xml的配置
+基于注释的配置
+基于java的配置
+
+基于java的容器配置----------/
+使用@Configuration和@Bean
+
+实例化容器
+
+基于xml的容器配置-----------/
+实例化容器
+ApplicationContext context = new ClassPathXmlApplicationContext("services.xml", "daos.xml");容器从各种外部资源（例如本地文件系统，Java等）中加载配置元数据CLASSPATH
+
+使用容器
+可以获取IoC容器管理的beans
+
+Bean总览
+Bean在容器中被定义为BeanDefinition对象，该对象包含以下属性：全限定名，
+。。。
+
+命名Bean
+基于xml的配置，Bean的id和name可作为标识符
+
+实例化Bean
